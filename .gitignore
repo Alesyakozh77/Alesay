@@ -1,32 +1,29 @@
-# Prerequisites
-*.d
+#include <iostream>
+int main() {
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+    int height = 4;
 
-# Precompiled Headers
-*.gch
-*.pch
+    
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+    for (int i = 1; i <= height; ++i) {
 
-# Fortran module files
-*.mod
-*.smod
+        for (int j = 1; j <= height - i; ++j) {
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+            std::cout << " ";
 
-# Executables
-*.exe
-*.out
-*.app
+        }
+
+        for (int k = 1; k <= 2 * i - 1; ++k) {
+
+            std::cout << "*";
+
+        }
+
+        std::cout << std::endl;
+
+    }
+
+    
+
+    return 0;
+}
